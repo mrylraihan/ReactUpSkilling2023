@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    margin: 3rem auto;
+    width: 40rem;
+    padding: 1rem;
+    background: white;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.item{
+    border: 1px solid black;
+    padding: 40px;
+    font-size: 160px; 
+}
+.items{
+    border: 1px solid black;
+    padding: 40px;
+    font-size: 60px; 
+}
+.wrapping{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+       
+}

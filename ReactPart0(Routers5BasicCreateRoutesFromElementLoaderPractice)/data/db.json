@@ -1,0 +1,53 @@
+{
+    "people": [
+        {
+            "id": 1,
+            "name": "Ryan",
+            "title": "Senior React Developer",
+            "salary": 50000,
+            "location": "London, UK"
+        },
+        {
+            "id": 2,
+            "name": "Moe",
+            "title": "Plumber",
+            "salary": 40000,
+            "location": "Bowser's Castle"
+        },
+        {
+            "id": 3,
+            "name": "Timmy",
+            "title": "Gym Leader",
+            "salary": 75000,
+            "location": "Kanto Region"
+        },
+        {
+            "id": 4,
+            "name": "Mike",
+            "title": "Vue Developer",
+            "salary": 40000,
+            "location": "Liverpool, UK"
+        },
+        {
+            "id": 5,
+            "name": "Eran",
+            "title": "Tutorial Maker",
+            "salary": 35000,
+            "location": "Manchester, UK"
+        },
+        {
+            "id": 6,
+            "name": "Larry",
+            "title": "Website Manager",
+            "salary": 50000,
+            "location": "Berlin, Germany"
+        },
+        {
+            "id": 7,
+            "name": "Tom",
+            "title": "Food Tester",
+            "salary": 30000,
+            "location": "London, UK"
+        }
+    ]
+}

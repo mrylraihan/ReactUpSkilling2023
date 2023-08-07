@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    margin: 3rem auto;
+    width: 27rem;
+    padding: 1rem;
+    background: white;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.item{
+    border: 1px solid black;
+    padding: 40px;
+    font-size: 80px;
+    
+}

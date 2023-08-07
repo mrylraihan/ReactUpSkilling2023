@@ -1,0 +1,56 @@
+.app {
+  margin: 3rem auto;
+  width: 30rem;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.app h1 {
+  margin: 0;
+  text-align: center;
+  color: #888888;
+}
+
+html {
+  background: #888888;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, Verdana;
+}
+
+p {
+  color: #666666;
+}
+
+.wrapper {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#thumbnails {
+  position: relative;
+  display: block;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+#bigImage {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.thumb {
+  flex: 1;
+  margin: 5px;
+  height: 100px;
+  width: 100px;
+  display: block;
+  cursor: pointer;
+  object-fit: cover;
+}

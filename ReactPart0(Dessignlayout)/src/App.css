@@ -1,0 +1,22 @@
+.app {
+  margin: 3rem auto;
+  width: 30rem;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  /* text-align: center; */
+}
+
+.app h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.gridDisplay{
+  width: 70%;
+  margin: auto;
+  display: grid;
+  grid-column: 1fr 1fr 1fr ;
+  grid-row: 1fr 1fr 1fr ;
+}

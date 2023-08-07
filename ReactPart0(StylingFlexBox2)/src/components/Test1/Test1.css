@@ -1,0 +1,26 @@
+.test1{
+    margin: 3rem auto;
+    /* width: 80rem; this will lock all of your */
+    padding: 1rem;
+    text-align: center;
+    border: 3px solid red;
+}
+
+.test1 ol{
+    display: flex;
+    border: 3px solid green;
+    font-size:20px;
+    padding: 5px;
+    margin: 5px;
+    list-style: none;
+    gap: 1rem;
+    /* allow items to wrap instead of bunch up */
+    flex-wrap: wrap;
+}
+.test1 li{
+    border: 3px dotted blue;
+    /* allow items to fill up empty space and shrink */
+    flex-grow: 1;
+    flex-shrink: 1;
+    
+}

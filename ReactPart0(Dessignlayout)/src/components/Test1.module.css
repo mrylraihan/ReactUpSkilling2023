@@ -1,0 +1,5 @@
+.navContainer{
+    display: flex;
+    list-style-type: none;/* removes dots from li's*/
+    justify-content: space-evenly;
+}

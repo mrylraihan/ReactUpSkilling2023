@@ -1,0 +1,20 @@
+nav {
+    margin: 0;
+    padding: 0;
+    /* background-color: grey; */
+}
+
+
+nav a{
+/* text-decoration: none; */
+margin-right: 10px;
+padding: 10px;
+font-size: 20px;
+}
+
+/* css reads the Link and NavLink as a a tag */
+/* nav a.active {
+text-decoration: none;
+font-weight: bold;
+color: red;
+} */
