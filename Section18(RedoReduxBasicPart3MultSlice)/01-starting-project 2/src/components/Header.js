@@ -1,8 +1,10 @@
 import classes from './Header.module.css';
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {toggleActions} from '../store/index'
 const Header = () => {
+  const toggle = useSelector(state=>state.toggleSlice.toggle)
   const dispatch = useDispatch()
+
   return (
     <header className={classes.header}>
       <h1>Redux Auth</h1>
@@ -15,7 +17,7 @@ const Header = () => {
             <a href='/'>My Sales</a>
           </li>
           <li>
-            <button onClick={dispatch.bind(this, toggleActions.toggleCounter())}>Logout</button>
+            {toggle && <button onClick={dispatch.bind(this, toggleActions.toggleCounter())}>Logout</button>}
           </li>
         </ul>
       </nav>
