@@ -5,7 +5,7 @@ import Products from './components/Shop/Products';
 import { useEffect } from 'react';
 import { uiActions } from './store/ui-slice';
 import Notification from './components/UI/Notification';
-import { sendCartData } from './store/cart-slice';
+import { sendCartData, fetchCartData } from './store/cart-actions';
 
 let isInitial = true;
 
@@ -15,13 +15,19 @@ function App() {
   const notification = useSelector(state => state.uiSlice.notification)
   const cart = useSelector(state=>state.cartSlice)
   console.log(cart)
-  console.log("test")
+  // console.log("test")
+  
+  useEffect(()=>{
+    dispatch(fetchCartData())
+  },[dispatch])
+
   useEffect(()=>{
     if (isInitial) {
       isInitial = false
-      // dispatch(sendCartData(cart))
       return;
     }else{
+      if(cart.changed){
+      }
       dispatch(sendCartData(cart))
     }
   },[cart, dispatch])
