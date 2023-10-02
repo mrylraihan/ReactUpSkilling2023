@@ -1,3 +1,4 @@
+import Layout from '@/components/layout/Layout'
 import MeetupList from '@/components/meetups/MeetupList'
 import { useRouter } from 'next/router'
 import React from 'react'
@@ -29,11 +30,11 @@ const DUMMY_MEETUPS = [
 function HomePage() {
   const router = useRouter()
   return (
-    <div>
+    <>
       <h1>Home</h1>
       <button onClick={() => router.push('new-meetup')}>Go to Meet up</button>
       <MeetupList meetups={DUMMY_MEETUPS} />
-    </div>
+    </>
   )
 }
 
