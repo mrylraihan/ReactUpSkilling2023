@@ -7,7 +7,7 @@ function index() {
     console.log(meetupId)
   return (
     <>
-      <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/1280px-Cat_August_2010-4.jpg"} alt={'cat'} />
+      <img src={"https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/1280px-Cat_August_2010-4.jpg"} style={{width:600}} alt={'cat'} />
     <div>index : {meetupId}</div>
     </>
   )
