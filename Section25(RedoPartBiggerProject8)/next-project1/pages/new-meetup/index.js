@@ -8,6 +8,7 @@ function NewMeetUpPage() {
     console.log(enteredData)
   }
 
+
   return (
     <div>
       <h1>NewMeetUpPage</h1>
