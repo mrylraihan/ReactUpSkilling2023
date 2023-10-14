@@ -9,6 +9,10 @@ const dataSlice = createSlice({
         getData(state, action){
             state.data = action.payload
             return state
+        },
+        deleteData(state, action){
+            state.data = state.data.filter((item) => item.id !== action.payload)
+            return state
         }
     }
 })

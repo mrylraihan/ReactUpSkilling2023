@@ -27,21 +27,32 @@ const DUMMY_MEETUPS = [
   },
 ]
 
-function HomePage() {
-  const [loadedMeetUps, setLoadedMeetUps] = useState([])
+function HomePage(props) {
+  // const [loadedMeetUps, setLoadedMeetUps] = useState(props.meetups)
   const router = useRouter()
-  useEffect(()=>{
-    // Send http request and fetch data
-    setLoadedMeetUps(DUMMY_MEETUPS)
-  })
+  // useEffect(()=>{
+  //   // Send http request and fetch data
+  //   setLoadedMeetUps(DUMMY_MEETUPS)
+  // })
+  console.log(props)
   return (
     <>
       <h1>Home</h1>
       <button onClick={() => router.push('new-meetup')}>Go to Meet up</button>
-      <MeetupList meetups={loadedMeetUps} />
+      <MeetupList meetups={props.meetups} />
+      {/* <MeetupList meetups={loadedMeetUps} /> */}
       {/* <MeetupList meetups={DUMMY_MEETUPS} /> */}
     </>
   )
 }
 
 export default HomePage
+
+export const getStaticProps = async () =>{
+
+  return {
+    props:{
+      meetups: DUMMY_MEETUPS
+    }
+  }
+}

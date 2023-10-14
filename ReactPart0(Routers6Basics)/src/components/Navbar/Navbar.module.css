@@ -1,0 +1,13 @@
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #dddddd;
+}
+
+.nav li {
+    float: left;
+    display: block;
+    padding: 8px;
+}
