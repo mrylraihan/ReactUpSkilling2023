@@ -56,7 +56,7 @@ export const getServerSideProps = async (context) => {
   console.log(res)
   return {
     props: {
-      meetups: DUMMY_MEETUPS
+      meetups: DUMMY_MEETUPS,
     }
   }
 }
