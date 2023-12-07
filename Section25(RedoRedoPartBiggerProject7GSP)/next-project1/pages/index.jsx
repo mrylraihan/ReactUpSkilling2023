@@ -27,13 +27,16 @@ const DUMMY_MEETUPS = [
   },
 ]
 
-function HomePage() {
+function HomePage(props) {
   const [loadedMeetUps, setLoadedMeetUps] = useState([])
   const router = useRouter()
   useEffect(()=>{
     // Send http request and fetch data
     setLoadedMeetUps(DUMMY_MEETUPS)
   })
+
+  console.log(props, 'props')
+  console.log(loadedMeetUps)
   return (
     <>
       <h1>Home</h1>
@@ -45,3 +48,13 @@ function HomePage() {
 }
 
 export default HomePage
+
+export async function getStaticProps(){
+// Fetch data from an api 
+  return {
+    props:{
+      meetups: DUMMY_MEETUPS,
+      revalidate:10 //will revalidate the data every 10 seconds
+    }
+  };
+}

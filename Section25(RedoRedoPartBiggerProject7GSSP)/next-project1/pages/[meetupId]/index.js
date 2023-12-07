@@ -6,7 +6,8 @@ function index(props) {
   const router = useRouter()
   let meetupId = router.query.meetupId
   console.log(meetupId)
-  console.log(props)
+  console.log(props, ":Props")
+  console.log(router.query, ":Router")
   return (
     <>
       <MeetupDetails image={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/800px-Stadtbild_M%C3%BCnchen.jpg?20130611211153"} title={'A First meet up'} description={'the meet up description'} address={"some address and zip"} />
@@ -32,7 +33,7 @@ export async function getServerSideProps(context) {
   const res = context.res;
   const params  = context.params;
   const query = context.query;
-
+  
 // Fetch data from an api 
   return {
     props:{
