@@ -9,6 +9,7 @@ function Navbar(props) {
                   <Link href={'/'}><li>Home</li></Link>
                   <Link href={'/About'}><li>About</li></Link>
                   <Link href={'/More'}><li>More</li></Link>
+                  <Link href={'/test/dynamicRoute'}><li>Dynamic</li></Link>
            
         </ul>
     </div>
