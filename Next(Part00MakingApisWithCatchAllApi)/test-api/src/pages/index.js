@@ -12,12 +12,18 @@ function index() {
     const response = await res.json()
     console.log(response)
   }
+  const getData3 = async()=>{
+    const res = await fetch('/api/blahhabl/blahhh')
+    const response = await res.json()
+    console.log(response)
+  }
   
   return (
     <div className='app'>
       <h1>Index</h1>
       <button onClick={getData}>Get Data</button>
       <button onClick={getData2}>Get Data from another Test Api</button>
+      <button onClick={getData3}>Get Data from catch all api</button>
       <button onClick={()=>router.push('/home')}>Go to Home</button>
     </div>
   )
