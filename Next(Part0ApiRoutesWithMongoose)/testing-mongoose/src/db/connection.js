@@ -1,9 +1,13 @@
 import mongoose from "mongoose";
 
 const connectionToDb = async () =>{
-     // if(mongoose.connection.readyState === 1){
-     //      return mongoose.connection.asPromise()
-     // }
-     return await mongoose.connect('mongodb://localhost/notesNext')
+     console.log(mongoose.connection.readyState)
+     if(mongoose.connection.readyState === 1){
+          console.log('in continue connection')
+           mongoose.connection.asPromise()
+     }else{
+          console.log('starting new connection')
+          await mongoose.connect('mongodb://localhost/notesNext')
+     }
 }
 export default connectionToDb

@@ -4,14 +4,14 @@ function index(props) {
   const noteRef = useRef()
   // useEffect(() => { getAllData()}, [])
   const getAllData = async () => {
-    const res = await fetch('./api/oneData')
+    const res = await fetch('./api/getAllData')
     const result = await res.json()
     console.log(result)
   }
   const submitHandler = e => {
     e.preventDefault();
     const inputNote  = noteRef.current.value
-    fetch('./api/oneData', {
+    fetch('./api/sendData', {
       method: 'POST',
       body: JSON.stringify({note:inputNote}),
       headers: {
@@ -45,14 +45,14 @@ function index(props) {
 
 export default index
 
-// export const getStaticProps = async ()=>{
-//   const response = await fetch('http://localhost:3000/api/getAllData');
-//   const data = await response.json();
+export const getStaticProps = async ()=>{
+  const response = await fetch('http://localhost:3000/api/oneData');
+  const data = await response.json();
 
-//   // Return the fetched data as props
-//   return {
-//     props: {
-//       data,
-//     },
-//   };
-// }
+  // Return the fetched data as props
+  return {
+    props: {
+      data,
+    },
+  };
+}
