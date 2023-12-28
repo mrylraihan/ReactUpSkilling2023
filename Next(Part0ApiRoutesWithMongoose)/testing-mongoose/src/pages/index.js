@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-function index(props) {
+function index() {
   const noteRef = useRef()
   // useEffect(() => { getAllData()}, [])
   const getAllData = async () => {
@@ -12,16 +12,15 @@ function index(props) {
     e.preventDefault();
     const inputNote  = noteRef.current.value
     fetch('./api/sendData', {
-      method: 'POST',
-      body: JSON.stringify({note:inputNote}),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    }).then(res => res.json())
-      .then(console.log)
-      .catch(console.error)
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({note:inputNote})
+    })
+    .then(res=>res.json())
+    .then(console.log)
+    noteRef.current.value = ''
   }
-  console.log(props)
+  
   return (
     <div>
       <div className='app'>
@@ -45,14 +44,14 @@ function index(props) {
 
 export default index
 
-export const getStaticProps = async ()=>{
-  const response = await fetch('http://localhost:3000/api/oneData');
-  const data = await response.json();
+// export const getStaticProps = async ()=>{
+//   const response = await fetch('http://localhost:3000/api/oneData');
+//   const data = await response.json();
 
-  // Return the fetched data as props
-  return {
-    props: {
-      data,
-    },
-  };
-}
+//   // Return the fetched data as props
+//   return {
+//     props: {
+//       data,
+//     },
+//   };
+// }

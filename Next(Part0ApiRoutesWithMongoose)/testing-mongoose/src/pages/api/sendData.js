@@ -3,13 +3,10 @@ import Note from "@/models/NoteModel"
 import connectionToDb from "@/db/connection"
 
 async function handler (req, res){
-    await connectionToDb()
-    const inputNote = req.body.inputNote
-
-    let newNote = await Note.create({note:inputNote})
-    // newNote = await newNote.json() 
-    // await mongoose.connection.close();
-    res.json(newNote)
+  const note = req.body.note
+  await connectionToDb()
+  const result = await Note.create({note:note})
+  res.json(result)
 
     
 }

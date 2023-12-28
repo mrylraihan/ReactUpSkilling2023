@@ -5,7 +5,7 @@ import connectionToDb from "@/db/connection"
 
 
 async function handler(req, res) {
-    // await mongoose.connect('mongodb://localhost/notesNext')
+    await mongoose.connect('mongodb://localhost/notesNext')
 
     await connectionToDb()
     if(req.method ==="GET"){
