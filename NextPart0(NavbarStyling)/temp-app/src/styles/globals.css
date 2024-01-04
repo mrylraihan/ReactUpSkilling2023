@@ -1,0 +1,42 @@
+.app {
+  margin: 3rem auto;
+  width: 30rem;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.app h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.nav li {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+/* Change the link color to #111 (black) on hover */
+.nav li :hover {
+  background-color: #111;
+}
+
+body {
+  font-family: 'Open Sans', 'Lato', sans-serif;
+  margin: 0;
+}
