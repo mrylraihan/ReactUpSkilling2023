@@ -1,0 +1,1 @@
+// create endpoint for getting all meetups to then access in getStaticProps but Nextjs allows us to access the db directly in getStaticProps or getServerSideProps
