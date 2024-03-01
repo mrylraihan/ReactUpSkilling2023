@@ -11,6 +11,7 @@ function TestComp1() {
         function handlerBeforeUnload(e){
             e.preventDefault(); 
             console.log('test')
+			// 
             return (e.returnValue = 'Hey did you mean to do that?')
         }
 
