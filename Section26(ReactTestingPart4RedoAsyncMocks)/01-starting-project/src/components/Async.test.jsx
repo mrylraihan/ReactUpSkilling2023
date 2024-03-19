@@ -15,6 +15,7 @@ describe('Testing Async Component', () => {
 						{ id: 0, title: 'test0' },
 						{ id: 1, title: 'test1' },
 						{ id: 2, title: 'test2' },
+						{ id: 3, title: 'test3' },
 					],
 				})
 		render(<Async />)
