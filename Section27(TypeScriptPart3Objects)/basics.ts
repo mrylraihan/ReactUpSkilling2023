@@ -19,3 +19,18 @@ let fName:string = 'wallie';
 console.log(fName)
 // More complex data types
 let hobbies: string[];
+
+hobbies = ['sports','cooking']
+
+let person: {
+    name:string,
+    age:number
+}
+
+person = {
+    name:'wallie',
+    age:3
+};
+// person = 5
+// console.log(person)
+console.log(person)
