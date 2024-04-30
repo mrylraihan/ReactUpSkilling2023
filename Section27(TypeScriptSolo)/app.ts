@@ -13,3 +13,12 @@ function addStrings(a:string, b:string){
 const sumString = addStrings('hello',' world')
 
 console.log(sumString)
+
+const testOptional = (name?:string)=>{
+
+    let result = name?"true":"false"
+    console.log(result)
+}
+
+testOptional()
+testOptional('a')
