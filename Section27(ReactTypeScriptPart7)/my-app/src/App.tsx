@@ -7,8 +7,11 @@ import FifthTest from './components/passingProps/FifthTest'
 import SixthTest from './components/passingProps/SixthTest'
 import Todos from './components/Todos'
 import Todo from './models/todo'
+import Person from './models/person'
+import Seventh from './components/passingProps/Seventh'
 
 function App() {
+	let person = new Person('wayel', 32)
 	const todoList = [
 		new Todo('Learn React'),
 		new Todo('Learn TypeScript'),
@@ -25,6 +28,8 @@ function App() {
 			<FifthTest />
 			<FifthTest name={'wallie'} />
 			<SixthTest />
+			<Seventh {...person}/>
+			<Seventh name={person.name} age={person.age}/>
 			<Todos items={todoList}>test</Todos>
 			<Todos items={todoList} />
 		</>
