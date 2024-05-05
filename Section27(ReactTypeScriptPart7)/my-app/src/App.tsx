@@ -9,6 +9,7 @@ import Todos from './components/Todos'
 import Todo from './models/todo'
 import Person from './models/person'
 import Seventh from './components/passingProps/Seventh'
+import EighthTest from './components/passingProps/EighthTest'
 
 function App() {
 	let person = new Person('wayel', 32)
@@ -28,6 +29,7 @@ function App() {
 			<FifthTest />
 			<FifthTest name={'wallie'} />
 			<SixthTest />
+			<EighthTest name="Sparky" animalType='Dog'/>
 			<Seventh {...person}/>
 			<Seventh name={person.name} age={person.age}/>
 			<Todos items={todoList}>test</Todos>
