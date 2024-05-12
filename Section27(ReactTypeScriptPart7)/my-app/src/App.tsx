@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import FirstTest from './components/passingProps/FirstTest'
 import SecondTest from './components/passingProps/SecondTest'
 import ThirdTest from './components/passingProps/ThirdTest'
@@ -10,13 +10,22 @@ import Todo from './models/todo'
 import Person from './models/person'
 import Seventh from './components/passingProps/Seventh'
 import EighthTest from './components/passingProps/EighthTest'
+import Post from './models/post'
+import NinthTest from './components/passingProps/NinthTest'
 
 function App() {
+	const [list, setList] = useState<Post[]>([])
 	let person = new Person('wayel', 32)
 	const todoList = [
 		new Todo('Learn React'),
 		new Todo('Learn TypeScript'),
 	]
+	useEffect(()=>{
+		fetch('https://jsonplaceholder.typicode.com/posts')
+		.then(res=>res.json())
+		.then(setList)
+	},[])
+	console.log(list)
   return (
 		<>
 			<div className='App'>
@@ -29,9 +38,10 @@ function App() {
 			<FifthTest />
 			<FifthTest name={'wallie'} />
 			<SixthTest />
-			<EighthTest name="Sparky" animalType='Dog'/>
 			<Seventh {...person}/>
 			<Seventh name={person.name} age={person.age}/>
+			<EighthTest name="Sparky" animalType='Dog'/>
+			<NinthTest items={list}/>
 			<Todos items={todoList}>test</Todos>
 			<Todos items={todoList} />
 		</>
