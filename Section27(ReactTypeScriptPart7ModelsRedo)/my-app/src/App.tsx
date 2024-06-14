@@ -9,9 +9,12 @@ import SixthTest from './components/passingProps/SixthTest'
 import Todo from './models/todo'
 import Navbar from './components/Navbar'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Person from './models/person'
+import Seventh from './components/passingProps/Seventh'
 
 function App() {
 	const items = [new Todo('Learn React'), new Todo("Learn Typescript")]
+	const people = [new Person('wayel', 32), new  Person('heshow', 32)]
   return (
 		<Router>
 			<div className='App'>
@@ -25,10 +28,26 @@ function App() {
 			<FifthTest />
 			<FifthTest name={'wallie'} />
 			<SixthTest />
+			<Seventh person1={people[0]} person2={people[1]} />
+			<Seventh
+				person1={people[0]}
+				person2={people[1]}
+				handleClick={() => console.log('hello')}
+			/>
 			<Todos items={items}>test</Todos>
 			{/* <Todos items={['Learn React', 'Learn TypeScript']} /> */}
 			<Routes>
-				<Route path='/about'element={<FirstTest name={'wallie'} />} />
+				<Route
+					path='/'
+					element={
+						<Seventh
+							person1={people[0]}
+							person2={people[1]}
+							handleClick={() => console.log('hello')}
+						/>
+					}
+				/>
+				<Route path='/about' element={<FirstTest name={'wallie'} />} />
 			</Routes>
 		</Router>
 	)
