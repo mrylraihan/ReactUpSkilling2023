@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FirstTest from './components/passingProps/FirstTest'
 import SecondTest from './components/passingProps/SecondTest'
 import ThirdTest from './components/passingProps/ThirdTest'
@@ -11,6 +11,9 @@ import Navbar from './components/Navbar'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Person from './models/person'
 import Seventh from './components/passingProps/Seventh'
+import EighthTest from './components/passingProps/EighthTest'
+import NinthTest from './components/passingProps/NinthTest'
+
 
 function App() {
 	const items = [new Todo('Learn React'), new Todo("Learn Typescript")]
@@ -34,6 +37,10 @@ function App() {
 				person2={people[1]}
 				handleClick={() => console.log('hello')}
 			/>
+			<EighthTest/>
+			<EighthTest>{['stuff', 'test'].join(' ')}</EighthTest>
+			<NinthTest data={{id:2,stats:[2,3,4]}}/>
+			<NinthTest/>
 			<Todos items={items}>test</Todos>
 			{/* <Todos items={['Learn React', 'Learn TypeScript']} /> */}
 			<Routes>

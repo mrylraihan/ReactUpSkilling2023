@@ -22,4 +22,4 @@ console.log(course)
 type Word = string
 
 let book:Word;
-book = 
+book = "harry potter"
