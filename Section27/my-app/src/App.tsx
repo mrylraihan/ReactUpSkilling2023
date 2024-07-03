@@ -5,8 +5,10 @@ import ShowAll from './components/ShowAll';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
+import TestProps from './components/TestProps';
 function App() {
   const [nameList, setNameList] = useState<string[]>([])
+  const [name, setName] = useState<string>('')
 
   const addName = (text:string)=>{
     setNameList(prev=>prev.concat(text))
@@ -16,6 +18,7 @@ console.log(nameList)
 		<>
 			<Router>
 				<Navbar />
+        <TestProps setName={setName} name={name}/>
 				<Routes>
 					<Route path='/' element={<Home/>} />
 					<Route path='/add' element={<AddOne addName={addName} />} />
