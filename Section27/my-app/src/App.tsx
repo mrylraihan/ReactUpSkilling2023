@@ -6,6 +6,8 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import TestProps from './components/TestProps';
+import TestUseState from './components/TestUseState';
+import TestUseRef from './components/TestUseRef';
 function App() {
   const [nameList, setNameList] = useState<string[]>([])
   const [name, setName] = useState<string>('')
@@ -26,6 +28,8 @@ console.log(nameList)
 					
 				</Routes>
 			</Router>
+			<TestUseState/>
+			<TestUseRef/>
 		</>
 	)
 }
